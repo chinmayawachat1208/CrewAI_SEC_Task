@@ -1,5 +1,6 @@
 import os 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
+
 from crewai import Task, Crew
 from agents.sec_agent import sec_agent
 from agents.insider_agent import insider_agent
@@ -45,10 +46,12 @@ def main():
     result = crew.kickoff()
     print("\n✅ Final Report:\n", result)
 
+    # Save output in a text file
+    with open("output.txt", "w", encoding="utf-8") as f:
+        f.write("=== CrewAI SEC Task Report ===\n")
+        f.write("SEC Data: " + str(sec_data) + "\n")
+        f.write("Insider Data: " + str(insider_data) + "\n")
+        f.write("\n✅ Final Report:\n" + str(result) + "\n")
+
 if __name__ == "__main__":
     main()
-   
-
- 
-
-
