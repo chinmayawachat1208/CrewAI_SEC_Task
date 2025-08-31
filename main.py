@@ -1,6 +1,5 @@
 import os 
-os.environ["OPENAI_API_KEY"] = "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"
-from crewai import Task, Crew
+os.environ["OPENAI_API_KEY"] = "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"
 from agents.sec_agent import sec_agent
 from agents.insider_agent import insider_agent
 from agents.report_agent import report_agent
