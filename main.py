@@ -1,7 +1,10 @@
 import os 
 os.environ["OPENAI_API_KEY"] = "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"
+<<<<<<< HEAD
 
 from crewai import Task, Crew
+=======
+>>>>>>> 81abeeba9af9f8be9b3d2b4202fee36dfdfdbf5a
 from agents.sec_agent import sec_agent
 from agents.insider_agent import insider_agent
 from agents.report_agent import report_agent
